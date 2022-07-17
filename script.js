@@ -21,7 +21,7 @@ function create_table(task_id, json_data) {
         '<h3>' +
         table_title +
         '</h3>' +
-        '<h5>' + 'ユーザの名前"に（※）が付いている場合には，話し相手をその名前で呼ぶような発話を作成してください．<br />' +
+        '<h5>' + '"ユーザの名前"に（※）が付いている場合には，話し相手をその名前で呼ぶような発話を作成してください．<br />' +
         '(例)「発話意図：質問する，ユーザの名前：鈴木，観光地への同行者：空欄」の場合' +
         '「鈴木様はどなたとご観光される予定ですか？」' + '</h5>' +
         '</div>' +
@@ -113,12 +113,16 @@ function submit(table_id) {
         var replace2 = "";
         replace1 = document.getElementById(task_id + "_" + json_data[i].id + '_' + json_data[i].speaker + "_utterance1").value;
         replace2 = document.getElementById(task_id + "_" + json_data[i].id + '_' + json_data[i].speaker + "_utterance2").value;
-        if (replace1 == "" || replace2 == "") all_checked = true;
-        else value_tmp += replace1 + "," + replace2;
-
+        if (replace1 == "" || replace2 == "") {
+            all_checked = false;
+            alert("入力されていない発話があります．");
+            return;
+        } else {
+            value_tmp += replace1 + "," + replace2;
+        }
         text_write += value_tmp + "\n";
     }
 
     if (all_checked == true) download(table_id + "_" + task_id + "_" + document.getElementById("WorkerID").value + "_" + document.getElementById("WorkerName").value + ".csv", text_write);
-    else alert(dialog_id + "つ目の対話欄に入力されていない項目があります．");
+    else alert("入力されていない発話があります．");
 };
