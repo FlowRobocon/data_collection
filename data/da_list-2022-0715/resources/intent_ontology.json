@@ -1,0 +1,186 @@
+{
+    "system": {
+        "welcome": {
+            "jp": "歓迎の挨拶をする",
+            "required_slots": [],
+            "optional_slots": [],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "self_introduction": {
+            "jp": "自己紹介をする",
+            "required_slots": [
+                "system_name"
+            ],
+            "optional_slots": [],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "finish_for_time_limit": {
+            "jp": "制限時間になったので対話を切り上げる",
+            "required_slots": [],
+            "optional_slots": [
+                "how_to_call_user"
+            ],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "thankyou_for_visiting": {
+            "jp": "来店へのお礼を言う",
+            "required_slots": [],
+            "optional_slots": [
+                "how_to_call_user"
+            ],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "goodbye": {
+            "jp": "別れの挨拶をする",
+            "required_slots": [],
+            "optional_slots": [
+                "how_to_call_user"
+            ],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "sorry": {
+            "jp": "謝罪する",
+            "required_slots": [],
+            "optional_slots": [
+                "how_to_call_user"
+            ],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "good": {
+            "jp": "肯定的な反応を示す",
+            "required_slots": [],
+            "optional_slots": [
+                "how_to_call_user", "user_*"
+            ],
+            "min_optional_slots": 1,
+            "impossible_values": []
+        },
+        "affirm": {
+            "jp": "肯定する",
+            "required_slots": [],
+            "optional_slots": [],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "negate": {
+            "jp": "否定する",
+            "required_slots": [],
+            "optional_slots": [],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "start_request": {
+            "jp": "これから質問し始めることを伝える",
+            "required_slots": [],
+            "optional_slots": [
+                "how_to_call_user"
+            ],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "request": {
+            "jp": "質問する",
+            "required_slots": [],
+            "optional_slots": [
+                "how_to_call_user", "user_*"
+            ],
+            "min_optional_slots": 1,
+            "impossible_values": []
+        },
+        "confirm_attraction": {
+            "jp": "観光地の名称を確認する",
+            "required_slots": [
+                "target_name", "dummy_name"
+            ],
+            "optional_slots": [
+                "how_to_call_user"
+            ],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "inform": {
+            "jp": "教える",
+            "required_slots": [],
+            "optional_slots": [
+                "how_to_call_user", "attraction_*", "restaurant_*"
+            ],
+            "min_optional_slots": 1,
+            "impossible_values": []
+        },
+        "recommend_target": {
+            "jp": "観光地をお勧めする",
+            "required_slots": [],
+            "optional_slots": [
+                "how_to_call_user", "attraction_*", "restaurant_*"
+            ],
+            "min_optional_slots": 1,
+            "impossible_values": [
+                "不明", "なし", "不可能", "1", "2", "3"
+            ]
+        },
+        "ask_question": {
+            "jp": "気になることはないか尋ねる",
+            "required_slots": [],
+            "optional_slots": [
+                "how_to_call_user"
+            ],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        }
+    },
+    "user": {
+        "thankyou": {
+            "jp": "感謝する",
+            "required_slots": [],
+            "optional_slots": [],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "goodbye": {
+            "jp": "別れの挨拶をする",
+            "required_slots": [],
+            "optional_slots": [],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "request": {
+            "jp": "質問する",
+            "required_slots": [],
+            "optional_slots": [
+                "attraction_*", "restaurant_*"
+            ],
+            "min_optional_slots": 1,
+            "impossible_values": []
+        },
+        "affirm": {
+            "jp": "肯定する",
+            "required_slots": [],
+            "optional_slots": [],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "negate": {
+            "jp": "否定する",
+            "required_slots": [],
+            "optional_slots": [],
+            "min_optional_slots": 0,
+            "impossible_values": []
+        },
+        "inform": {
+            "jp": "教える",
+            "required_slots": [],
+            "optional_slots": [
+                "user_*"
+            ],
+            "min_optional_slots": 1,
+            "impossible_values": []
+        }
+
+    }
+}

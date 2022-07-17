@@ -1,0 +1,93 @@
+{
+    "attraction_description": [
+        "how_to_call_user",
+        "attraction_name",
+        "attraction_genre",
+        "attraction_description"
+    ],
+    "attraction_basic": [
+        "how_to_call_user",
+        "attraction_name",
+        "attraction_genre",
+        "attaction_address",
+        "attraction_open_time",
+        "attraction_closed_day",
+        "attraction_price",
+        "attraction_traffic1",
+        "attraction_traffic2",
+        "attraction_station",
+        "attraction_parking",
+        "attraction_tel",
+        "attraction_tour_duration",
+        "attraction_accompany",
+        "attraction_season",
+        "attraction_rain"
+    ],
+    "attraction_review": [
+        "how_to_call_user",
+        "attraction_name",
+        "attraction_genre",
+        "attraction_review"
+    ],
+    "attraction_extend": [
+        "how_to_call_user",
+        "attraction_name",
+        "attraction_souvenior",
+        "attraction_discount",
+        "attraction_available_with",
+        "attraction_wifi",
+        "attraction_luggage",
+        "attraction_take_in",
+        "attraction_photo",
+        "attraction_reservation",
+        "attraction_fishing",
+        "attraction_smoking",
+        "attraction_parking_price",
+        "attraction_vacant_time",
+        "attraction_cashless",
+        "attraction_size",
+        "attraction_latency",
+        "attraction_limitation",
+        "attraction_covid",
+        "attraction_event",
+        "attraction_inout"
+    ],
+    "restaurant_basic": [
+        "how_to_call_user",
+        "restaurant_name",
+        "restaurant_food",
+        "restaurant_rating"
+    ],
+    "request_user_basic": [
+        "how_to_call_user",
+        "user_target_experience",
+        "user_accompany_today",
+        "user_traffic_today"
+    ],
+    "user_basic": [
+        "user_name",
+        "user_target_experience",
+        "user_accompany_today",
+        "user_traffic_today"
+    ],
+    "user_preference": [
+        "how_to_call_user",
+        "user_accompany",
+        "user_traffic",
+        "user_tour_duration",
+        "user_food_type",
+        "user_season",
+        "user_genre",
+        "user_hobby",
+        "user_time",
+        "user_inout"
+    ],
+    "dialogue_1": [
+        "system_name"
+    ],
+    "dialogue_2": [
+        "how_to_call_user",
+        "target_name",
+        "dummy_name"
+    ]
+}
