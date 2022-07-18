@@ -123,6 +123,6 @@ function submit(table_id) {
         text_write += value_tmp + "\n";
     }
 
-    if (all_checked == true) download(table_id + "_" + task_id + "_" + document.getElementById("WorkerID").value + "_" + document.getElementById("WorkerName").value + ".csv", text_write);
+    if (all_checked == true) download(speaker + "_" + table_id + "_" + task_id + "_" + document.getElementById("WorkerID").value + "_" + document.getElementById("WorkerName").value + ".csv", text_write);
     else alert("入力されていない発話があります．");
 };
