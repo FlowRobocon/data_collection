@@ -150,6 +150,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script language="javascript" type="text/javascript">
         let task_id = Math.floor(Math.random()*50);
+        var speaker = "system"
         var json_data = ""
         $.getJSON("data/da_list-2022-0715/da_list-system-max2/group0/task" + String(task_id) + ".json", function(json) {
         json_data = json
