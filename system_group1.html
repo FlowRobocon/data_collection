@@ -37,9 +37,10 @@
     <div class="container" id='Instruction'>
         <h2>作業概要</h3>
             <p>旅行代理店における店員（カウンターセールス）または客の，どちらかの発話（話す言葉）を作成していただきます．作業内容は，<strong>指定される「どういう意図で発話しようとしているか」および「発話に含めたい情報」を全て含んだ発話を作成する</strong>，というものです．</p>
-            <p>※ 作業時間は40分程度と予想されます．<br>※
+            <!-- <p>※ 作業時間は40分程度と予想されます．<br>※
                 <font color=red>本ページを再読み込みすると，それまでに入力された情報はすべてリセットされますのでご注意ください．</font>
-            </p>
+            </p> -->
+            <p>※<font color=red>本ページを再読み込みすると，それまでに入力された情報はすべてリセットされますのでご注意ください．</font></p>
             <h2>対話状況</h3>
                 <ul style="background-color:lightgray;">
                     <li><strong>旅行代理店で客（ユーザ）と店員（システム）が会話している</strong></li>
@@ -87,6 +88,7 @@
                     発話文としては，<strong>「発話者」が「発話の意味」を伝える際に想定されるような文章</strong>を考えてください．</li>
             </ul>
             <!-- <img src="figs/1.png" width="900"> -->
+            <img src="figs/ガイドライン図.png" width="900">
             <p>
                 <font color=maroon><strong>発話文を作成する際の注意事項</strong></font>
             </p>
@@ -116,9 +118,14 @@
                     </li> -->
                     <li>「どういう意図で発話しようとしているか」および「発話に含めたい情報」の指定が20個並んでいますが，それぞれ前後との関係は無いものと考えてください．</li>
                     <li>作成していただく発話は，その前（過去）に指定に応じた適切な文脈があると考えていただいて大丈夫です．</li>
-                    <li><strong>発話文に含めてよい記号は句読点だけです．句読点以外の記号（！，？，～など）や絵文字は含めないでください．</strong></li>
+                    <li><strong>発話文に絵文字や顔文字といった記号は含めないでください．</strong></li>
                     <li>「発話に含めたい情報」が複数指定されていることがあります．その際は，<strong>1つの発話だけで全ての「発話に含めたい情報」を含んでいるような発話を2つ作成する必要があります．</strong></li>
+                    <li>「発話に含めたい情報」を一つの文で繋げにくい場合は，単に繋げるだけの文でも良いです．</li>
             </ul>
+            <p>良い例</p>
+            <img src="figs/good_example1.png" width="900">
+            <p>悪い例</p>
+            <img src="figs/bad_example1.png" width="900">
             <h3>2-2. 作成した発話データをダウンロードして，CrowdWorksで提出してください</h3>
             <p>表の下方に設置されている
                 <font bold>ダウンロード</font>をクリックすることで，入力された発話データをCSV形式でダウンロードすることができます．ダウンロードした発話データをCrowdWorksの作業ページで提出してください．</p>
@@ -131,10 +138,6 @@
                 <li>1度ダウンロードされた対話データのファイル名やファイルの中身は編集しないでください．</li>
                 <li>ダウンロードボタンをクリックしても対話データをダウンロードできない場合，全てのフォームが正しく入力されていな可能性があります．上記1-1.~2-1.の作業が正しくできているかを確認してください．</li>
             </ul>
-        <p>良い例</p>
-        <img src="figs/good_example1.png" width="900">
-        <p>悪い例</p>
-        <img src="figs/bad_example1.png" width="900">
         </p>
         <p>上記全ての作業が正確に行われていることが確認でき次第，CrowdWorksにてお仕事を承認し報酬をお支払いします．ただし，<strong>作業がインストラクション通りに行われていない場合や，明らかに対話の流れに沿わない発話や無関係な発話が確認できた場合は，不適切とみなし非承認とすることがありますのでご注意ください</strong>．</p>
 
@@ -152,7 +155,7 @@
         let task_id = Math.floor(Math.random()*50);
         var speaker = "system"
         var json_data = ""
-        $.getJSON("data/da_list-2022-0715/da_list-system-max2/group1/task" + String(task_id) + ".json", function(json) {
+        $.getJSON("data/da_list-2022-0718/da_list-system-max2/group1/task" + String(task_id) + ".json", function(json) {
         json_data = json
         // console.log(String(task_id))
         // console.log(json);
