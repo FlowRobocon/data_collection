@@ -51,7 +51,7 @@
         <h2>作業</h2>
         <p>
             <h3>1-1. CrowdWorksでのワーカーID・表示名を入力してください</h3>
-            <p>Worker ID：<input type="text" id="WorkerID" name="WorkerID" /></p>
+            <p>ワーカーID：<input type="text" id="WorkerID" name="WorkerID" /></p>
             <p>表示名：<input type="text" id="WorkerName" name="WorkerName" /></p>
         </p>
         <!-- <p>
@@ -150,6 +150,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script language="javascript" type="text/javascript">
         let task_id = Math.floor(Math.random()*50);
+        var speaker = "user"
         var json_data = ""
         $.getJSON("data/da_list-2022-0715/da_list-user-max2/group0/task" + String(task_id) + ".json", function(json) {
         json_data = json
