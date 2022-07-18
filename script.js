@@ -8,7 +8,7 @@ const shuffle = ([...array]) => {
 
 
 function create_table(task_id, json_data) {
-    // const json_data = '[{"id": 1,"speaker": "user","intent": "教える","slots": {"ユーザの名前": "鈴木"}},{"id": 2,"speaker": "system","intent": "観光地の名称を確認する","slots": {"ユーザの名前": "鈴木","観光地1の名称": "お台場海浜公園","観光地2の名称": "第三台場"}}]';
+    // const json_data = '[{"id": 1,"speaker": "user","intent": "教える","slots": {"客の名前": "鈴木"}},{"id": 2,"speaker": "system","intent": "観光地の名称を確認する","slots": {"客の名前": "鈴木","観光地1の名称": "お台場海浜公園","観光地2の名称": "第三台場"}}]';
     const dialog = json_data;
 
     var t_re = "";
@@ -21,8 +21,8 @@ function create_table(task_id, json_data) {
         '<h3>' +
         table_title +
         '</h3>' +
-        '<h5>' + '"ユーザの名前"に（※）が付いている場合には，話し相手をその名前で呼ぶような発話を作成してください．<br />' +
-        '(例)「発話意図：質問する，ユーザの名前（※）：鈴木，観光地への同行者：空欄」の場合<br />' +
+        '<h5>' + '"客の名前"に（※）が付いている場合には，話し相手をその名前で呼ぶような発話を作成してください．<br />' +
+        '(例)「発話意図：質問する，客の名前（※）：鈴木，観光地への同行者：空欄」の場合<br />' +
         '「鈴木様はどなたとご観光される予定ですか？」' + '</h5>' +
         '</div>' +
         '</caption>' +
