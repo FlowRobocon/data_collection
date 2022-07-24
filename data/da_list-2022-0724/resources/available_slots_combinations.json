@@ -53,6 +53,7 @@
     ],
     "restaurant_basic": [
         "how_to_call_user",
+        "attraction_name",
         "restaurant_name",
         "restaurant_food",
         "restaurant_rating"

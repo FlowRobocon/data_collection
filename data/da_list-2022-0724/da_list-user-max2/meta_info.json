@@ -3,5 +3,5 @@
     "max_optional_slots": 2,
     "task_batch_size": 20,
     "group_batch_size": 50,
-    "total_da": 1144
+    "total_da": 1150
 }

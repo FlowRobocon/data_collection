@@ -384,7 +384,7 @@
         ]
     },
     "restaurant_name": {
-        "jp": "レストランの名称",
+        "jp": "観光地周辺のレストランの名称",
         "type": "String",
         "possible_values": [],
         "sample_values": [
@@ -392,7 +392,7 @@
         ]
     },
     "restaurant_food": {
-        "jp": "レストランのジャンル",
+        "jp": "観光地周辺のレストランのジャンル",
         "type": "String",
         "possible_values": [],
         "sample_values": [
@@ -400,7 +400,7 @@
         ]
     },
     "restaurant_rating": {
-        "jp": "レストランの評価",
+        "jp": "観光地周辺のレストランの評価",
         "type": "Categorical",
         "possible_values": [
             "1", "2", "3", "4", "5"
