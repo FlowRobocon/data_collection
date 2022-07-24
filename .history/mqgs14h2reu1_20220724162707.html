@@ -36,7 +36,7 @@
 <body>
     <div class="container" id='Instruction'>
         <h2>作業概要</h2>
-            <p>旅行代理店における，とある対話状況（後述）において，客の発話（話す言葉）を作成していただきます．作業内容は，<strong>指定される「発話の意図」および「発話に含めたい情報」を全て含んだ発話を作成する</strong>，というものです．</p>
+            <p>旅行代理店における後述の対話状況において，客の発話（話す言葉）を作成していただきます．作業内容は，<strong>指定される「発話の意図」および「発話に含めたい情報」を全て含んだ発話を作成する</strong>，というものです．</p>
             <!-- <p>※ 作業時間は40分程度と予想されます．<br>※
                 <font color=red>本ページを再読み込みすると，それまでに入力された情報はすべてリセットされますのでご注意ください．</font>
             </p> -->
@@ -81,10 +81,10 @@
             </p>
             <img src="figs/guidelines_image.png" width="900">
             <ul>
-                <li>表の各行は，「発話者，発話の内容，発話文」からなります．</li>
-                <li><strong>「発話者」の列には</strong>，客と店員の内，どちらの発話であるかが示されています</li>
+                <li>表の各行は，「話者」，「発話の内容」，「発話文」からなります．</li>
+                <li><strong>「話者」の列には</strong>，客と店員の内，どちらの発話であるかが示されています</li>
                 <li><strong>「発話の内容」の列には</strong>，あなたが作成するべき発話の意図や発話に含めたい情報が示されています．</li>
-                <li><strong>「発話文」の列に</strong>，あなたが考えた「発話者」が「発話の内容」を伝える際の発話文を記入します．まず，発話を<strong>一種類</strong>考えて上の入力欄に記入してください．次に，<strong>違う言い方</strong>で<strong>同じ内容</strong>を言う発話を考えて下の入力欄に記入してください．</li>
+                <li><strong>「発話文」の列に</strong>，あなたが考えた「話者」が「発話の内容」を伝える際の発話文を記入します．まず，発話を<strong>一種類</strong>考えて上の入力欄に記入してください．次に，<strong>違う言い方</strong>で<strong>同じ内容</strong>を言う発話を考えて下の入力欄に記入してください．</li>
                 <ul>
                     <li>発話の内容は同じまま，<strong>口調や表現，伝え方</strong>を変えることでバリエーションのある発話文を作成してください．</li>
                     <li>実際の旅行代理店で想定されるような，<strong>できるだけ自然な</strong>発話文を作成してください．</li>
@@ -93,6 +93,7 @@
                         <li>発話の丁寧さは，旅行代理店における対話において不自然でないと考えられる範囲で自由に設定してください．</li>
                     </ul>
                     <li>発話意図の説明は<a href="files/user_intent_explanation.pdf" target="_blank">こちら</a>をご覧ください．（CrowdWorksの添付ファイル「客の発話意図の説明.pdf」と同一の内容です）</li>
+                    <li>一つの発話を複数の文で作成しても構いません．</li>
                     <li>「発話に含めたい情報」が複数指定されていることがあります．その際は，<strong>1つの発話だけ</strong>で<strong>全ての</strong>「発話に含めたい情報」を含むように発話を作成する必要があります．</li>
                         <p>【良い例】
                         <img src="figs/good_example1.png" width="900">
@@ -138,8 +139,8 @@
                             </li>
                         </ul>
                     </li> -->
-                    <li>「どういう意図で発話しようとしているか」および「発話に含めたい情報」の指定が20個並んでいますが，それぞれ前後との関係は無い独立のものとして作業を行ってください．</li>
-                    <li><strong>発話文に絵文字や顔文字といった記号は含めないでください．</strong></li>
+                    <li>「発話の意図」および「発話に含めたい情報」の指定が20個並んでいますが，それぞれ前後との関係は無い独立のものとして作業を行ってください．</li>
+                    <li><strong>発話文に絵文字や顔文字を含めないでください．</strong></li>
             </ul>
             
             <h3>2-2. 作成した発話データをダウンロードして，CrowdWorksで提出してください</h3>
@@ -171,7 +172,7 @@
         let task_id = Math.floor(Math.random()*7);
         var speaker = "user"
         var json_data = ""
-        $.getJSON("data/da_list-2022-0718/da_list-user-max2/group1/task" + String(task_id) + ".json", function(json) {
+        $.getJSON("data/da_list-2022-0724/da_list-user-max2/group1/task" + String(task_id) + ".json", function(json) {
         json_data = json
         // console.log(String(task_id))
         // console.log(json);
