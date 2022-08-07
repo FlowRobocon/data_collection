@@ -115,7 +115,7 @@ function submit(table_id) {
             alert("入力されていない発話があります．");
             return;
         } else {
-            value_tmp += replace1 + "," + replace2;
+            value_tmp += "\"" + replace1 + "\"" + "," + "\"" + replace2 + "\"";
         }
         text_write += value_tmp + "\n";
     }
