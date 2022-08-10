@@ -182,7 +182,7 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
-        const task_ids = [7, 21, 22, 29, 33, 40, 41, 49];
+        const task_ids = [1,2,3,4,5,6];
         let task_id = Number(getUrlQueries()["task_id"]);
         if(!task_ids.includes(task_id)){
             alert("urlが正しくありません");
