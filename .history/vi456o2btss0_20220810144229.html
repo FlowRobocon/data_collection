@@ -153,7 +153,7 @@
                 <!-- <li>2つの対話には，それぞれのダウンロードボタンが設けられていますので，必ず両方の対話データをダウンロードして提出してください．</li> -->
                 <li>ダウンロードされる発話データのCSVファイルは，<strong>中身を確認しないでください</strong>．ワーカー様のPCでファイルを開いてしまうと，文字コードに問題が生じ，ファイルの中身が壊れてしまうことがあるためです．</li>
                 <li>ダウンロード時に自動で開く設定になっている場合，開かれたファイルをもう一度保存したりせず，そのまま閉じてください．文字コードの関係上文字化けしたように見えるかもしれませんが，問題ありません．</li>
-                <li>1度ダウンロードされた発話データのファイル名やファイルの中身は編集しないでください．</li>
+                <li>1度ダウンロードされた対話データのファイル名やファイルの中身は編集しないでください．</li>
                 <li>ダウンロードボタンをクリックしても対話データをダウンロードできない場合，全てのフォームが正しく入力されていない可能性があります．上記1-1.~2-1.の作業が正しくできているかを確認してください．</li>
             </ul>
         </p>
@@ -163,42 +163,42 @@
     <div class="container" id='Table1'></div>
     <div class="container" id='submit_button-1'>
         <br>
-        <center><button class="btn btn-primary" id="submit-1" onclick="submit(1)">ダウンロード</button></center>
+        <center><button class="btn btn-primary" id="submit-1" onclick="submit(0)">ダウンロード</button></center>
         <br>
     </div>
 <!--     <script src="data/example.js"></script> -->
-<script src="script.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script language="javascript" type="text/javascript">
-    // let task_id = Math.floor(Math.random()*50);50件からランダムにする場合
-    // urlのパラメータを取得してタスク指定
-    // https://qiita.com/akinov/items/26a7fc36d7c0045dd2db
-    function getUrlQueries() {
-        var queryStr = window.location.search.slice(1);  // 文頭?を除外
-            queries = {};
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+        // let task_id = Math.floor(Math.random()*50);50件からランダムにする場合
+        // urlのパラメータを取得してタスク指定
+        // https://qiita.com/akinov/items/26a7fc36d7c0045dd2db
+        function getUrlQueries() {
+            var queryStr = window.location.search.slice(1);  // 文頭?を除外
+                queries = {};
 
-        // クエリがない場合は空のオブジェクトを返す
-        if (!queryStr) {
+            // クエリがない場合は空のオブジェクトを返す
+            if (!queryStr) {
+                return queries;
+            }
+
+            // クエリ文字列を & で分割して処理
+            queryStr.split('&').forEach(function(queryStr) {
+                // = で分割してkey,valueをオブジェクトに格納
+                var queryArr = queryStr.split('=');
+                queries[queryArr[0]] = queryArr[1];
+            });
+
             return queries;
         }
-
-        // クエリ文字列を & で分割して処理
-        queryStr.split('&').forEach(function(queryStr) {
-            // = で分割してkey,valueをオブジェクトに格納
-            var queryArr = queryStr.split('=');
-            queries[queryArr[0]] = queryArr[1];
-        });
-
-        return queries;
-    }
-    const task_ids = [5];
-    var task_id = Number(getUrlQueries()["task_id"]);
-    if(!task_ids.includes(task_id)){
-        alert("urlが正しくありません");
-    }
-    var speaker = "system"
-    var json_data = ""
-        $.getJSON("data/da_list-2022-0808/da_list-system-max2/group1/task" + String(task_id) + ".json", function(json) {
+        const task_ids = [7, 21, 22, 29, 33, 40, 41, 49];
+        var task_id = Number(getUrlQueries()["task_id"]);
+        if(!task_ids.includes(task_id)){
+            alert("urlが正しくありません");
+        }
+        var speaker = "system"
+        var json_data = ""
+        $.getJSON("data/da_list-2022-0808/da_list-system-max2/group0/task" + String(task_id) + ".json", function(json) {
         json_data = json
         // console.log(String(task_id))
         // console.log(json);
